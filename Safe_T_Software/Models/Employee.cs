@@ -9,9 +9,10 @@ namespace Safe_T_Software.Models
     public class Employee
     {
         private long empID;
-        private string empFirstName;
-        private string empLastName;
+        public string EmpFirstName { get; set; }
+        public string EmpLastName { get; set; }
         private int injuryCount;
+        private DateTime lastIncident;
 
         private List<Injury> injuries;
 
@@ -20,20 +21,42 @@ namespace Safe_T_Software.Models
         /// </summary>
         /// <param name="fName">String-type data for employee's first name</param>
         /// <param name="lname">String-type data for employee's last name</param>
-        public Employee(string fName, string lname)
+        public Employee(long id, string fName, string lname, List<Injury> passedInjuries = null)
         {
-            empFirstName = fName;
-            empLastName = lname;
+            empID = id;
+            EmpFirstName = fName;
+            EmpLastName = lname;
+            injuries = passedInjuries == null ? new List<Injury>() : passedInjuries;
+            injuryCount = injuries.Count;
+        }
+
+        public List<Injury> GetInjuries()
+        {
+            return this.injuries;
         }
 
         /// <summary>
-        ///     Empty Constructor
+        /// Update Employee injury list as well as increment the count
         /// </summary>
-        public Employee()
+        /// <param name="newIncident">Data Type Injury to be added to the Employee's List</param>
+        /// <returns>List containing the new injury</returns>
+        public List<Injury> AddInjury(Injury newIncident)
         {
+            injuries.Add(newIncident);
+            injuryCount = injuries.Count;
+            lastIncident = DateTime.Now;
 
+            return injuries;
         }
 
+        public int GetInjuryCount()
+        {
+            return injuryCount;
+        }
 
+        public override string ToString()
+        {
+            return $"\n{EmpFirstName} {EmpLastName}\nInjury Count: {injuryCount}\nLast Incident: {lastIncident}\n";
+        }
     }
 }
