@@ -124,6 +124,8 @@
     </Compile>
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Injury.cs" />
+    <Compile Include="Enums\InjuryEnums.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -152,8 +154,11 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.4.4</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.2.10</Version>
+      <Version>6.2.12</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
