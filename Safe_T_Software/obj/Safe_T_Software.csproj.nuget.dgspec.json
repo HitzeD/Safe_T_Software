@@ -1,27 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\d-hit\\Desktop\\Github\\Safe_T_Software\\Safe_T_Software\\Safe_T_Software.csproj": {}
+    "C:\\Users\\hitzed\\Desktop\\git\\Safe_T_Software\\Safe_T_Software\\Safe_T_Software.csproj": {}
   },
   "projects": {
-    "C:\\Users\\d-hit\\Desktop\\Github\\Safe_T_Software\\Safe_T_Software\\Safe_T_Software.csproj": {
+    "C:\\Users\\hitzed\\Desktop\\git\\Safe_T_Software\\Safe_T_Software\\Safe_T_Software.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\d-hit\\Desktop\\Github\\Safe_T_Software\\Safe_T_Software\\Safe_T_Software.csproj",
+        "projectUniqueName": "C:\\Users\\hitzed\\Desktop\\git\\Safe_T_Software\\Safe_T_Software\\Safe_T_Software.csproj",
         "projectName": "Safe_T_Software",
-        "projectPath": "C:\\Users\\d-hit\\Desktop\\Github\\Safe_T_Software\\Safe_T_Software\\Safe_T_Software.csproj",
-        "packagesPath": "C:\\Users\\d-hit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\d-hit\\Desktop\\Github\\Safe_T_Software\\Safe_T_Software\\obj\\",
+        "projectPath": "C:\\Users\\hitzed\\Desktop\\git\\Safe_T_Software\\Safe_T_Software\\Safe_T_Software.csproj",
+        "packagesPath": "C:\\Users\\hitzed\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hitzed\\Desktop\\git\\Safe_T_Software\\Safe_T_Software\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\d-hit\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\hitzed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "uap10.0.17763"
