@@ -122,6 +122,11 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Accident.cs" />
+    <Compile Include="Models\DutyTitle.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Incident.cs" />
+    <Compile Include="Models\PasswordHashing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
