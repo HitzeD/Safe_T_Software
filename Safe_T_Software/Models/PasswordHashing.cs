@@ -16,14 +16,13 @@ namespace Safe_T_Software.Models
         /// <returns></returns>
         public static byte[] CreateHash(string input)
         {
-            // Generate Salt
-            RNGCryptoServiceProvider provider = new RNGCryptoServiceProvider();
-            byte[] salt = new byte[SALT_SIZE];
-            provider.GetBytes(salt);
+            byte[] salt = GenerateSalt();
 
-            // Generate Hash
-            Rfc2898DeriveBytes pbkdf2 = new Rfc2898DeriveBytes(input, salt, ITERATIONS);
-            return pbkdf2.GetBytes(HASH_SIZE);
+            using (var pbkdf2 = new Rfc2898DeriveBytes(input, salt, ITERATIONS))
+            {
+                return pbkdf2.GetBytes(HASH_SIZE);
+            }
+
         }
 
         /// <summary>
@@ -34,15 +33,20 @@ namespace Safe_T_Software.Models
         /// <returns>Returns a boolean value after determining whether the hashes match</returns>
         public static bool MatchHash(byte[] hashed, string pass)
         {
-            byte[] verify = CreateHash(pass);
+            return Rfc2898DeriveBytes.Equals(hashed, CreateHash(pass));
+        }
 
-            if (verify == hashed)
+        /// <summary>
+        ///     Generates a salt for use within the System.Security.Cryptography library
+        /// </summary>
+        /// <returns>byte[] type which holds the value of the salt</returns>
+        private static byte[] GenerateSalt()
+        {
+            using (var rng = RandomNumberGenerator.Create())
             {
-                return true;
-            } 
-            else
-            {
-                return false;
+                byte[] salt = new byte[SALT_SIZE];
+                rng.GetBytes(salt);
+                return salt;
             }
         }
     }
